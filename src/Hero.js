@@ -1,37 +1,103 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import NavBar from "./Navbar";
-import { useSpring, animated, useChain } from "react-spring";
+import { animated, useTransition } from "react-spring";
 
 const Hero = () => {
-  const [open, set] = useState(false);
-  const springRef = useRef();
-  const transitionRef = useRef();
-  const fade = useSpring({
-    ref: springRef,
-    config: { friction: 100 },
-    from: { opacity: 0, transform: "translate3d(0,40px,0)" },
-    to: [
-      { opacity: 1, transform: "translate3d(0,0px,0)" },
-      { opacity: 0, transform: "translate3d(0, - 40px,0)" }
+  const ref = useRef([]);
+  const [items, set] = useState([]);
+  const [button, setButtonState] = useState(true);
+  const transitions = useTransition(items, null, {
+    from: {
+      opacity: 0,
+      height: 0,
+      innerHeight: 0,
+      transform: "perspective(600px) rotateX(0deg)",
+      color: "#8fa5b6"
+    },
+    enter: [
+      { opacity: 1, height: 80, innerHeight: 80 },
+      { transform: "perspective(600px) rotateX(0deg)", color: "#28d79f" },
+      { transform: "perspective(600px) rotateX(0deg)" }
     ],
-    delay: 200
+    leave: [
+      { color: "#c23369" },
+      { innerHeight: 0 },
+      { opacity: 0, height: 0 }
+    ],
+    update: { color: "#28b4d7" }
   });
 
-  useChain([springRef, transitionRef]);
+  const reset = useCallback(() => {
+    ref.current.map(clearTimeout);
+    ref.current = [];
+    set([]);
+    ref.current.push(
+      setTimeout(
+        () =>
+          set([
+            "Dermot Boyle",
+            "Innovative Web Development",
+            "Websites promote you 24/7: No employee will do that."
+          ]),
+        2000
+      )
+    );
+    ref.current.push(
+      setTimeout(
+        () =>
+          set([
+            "Dermot Boyle",
+
+            "Websites promote you 24/7: No employee will do that."
+          ]),
+        5000
+      )
+    );
+    ref.current.push(
+      setTimeout(
+        () =>
+          set([
+            "Dermot Boyle",
+            "JavaScript Developer",
+            "Websites promote you 24/7: No employee will do that."
+          ]),
+        8000
+      )
+    );
+
+    ref.current.push(
+      setTimeout(() => set(["Dermot Boyle", "JavaScript Developer"]), 10000)
+    );
+  }, []);
+
+  useEffect(() => void reset(), []);
 
   return (
-    <div className="heroBackground">
+    <div className="Container">
       <NavBar />
-      <animated.div style={fade} className="contentWrapper">
-        <div className="mainContent">
-          <h5 className="openingName">Dermot Boyle</h5>
-          <h1 className="openingTitle">Innovative Web</h1>
-          <h1 className="openingTitle">Development</h1>
-          <h5 className="openingQuote">
-            “Websites promote you 24/7: No employee will do that”{" "}
-          </h5>
-        </div>
-      </animated.div>
+      <div className="wrapper">
+        {setButtonState === false ? (
+          <button className="startButton" onClick={() => setButtonState(true)}>
+            Click Me!
+          </button>
+        ) : (
+          <button className="startButton" style={{ display: "none" }}></button>
+        )}
+        <main className="introAnimation">
+          {transitions.map(({ item, props: { innerHeight, ...rest }, key }) => (
+            <animated.div
+              className="transitions-item"
+              key={key}
+              style={rest}
+              onClick={reset}
+            >
+              <animated.div style={{ overflow: "hidden", height: innerHeight }}>
+                {item}
+              </animated.div>
+            </animated.div>
+          ))}
+        </main>
+      </div>
     </div>
   );
 };
