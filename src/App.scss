@@ -50,7 +50,7 @@ $accent-color: #355cc9;
   align-items: center;
   font-size: 2em;
   font-weight: 100;
-  text-transfrom: uppercase;
+  text-transform: uppercase;
   will-change: transform, opacity, height;
   white-space: nowrap;
   cursor: pointer;
@@ -108,7 +108,12 @@ $accent-color: #355cc9;
 }
 
 .front1 {
-  background-image: url(./images/portfolio1.png);
+  background-image: linear-gradient(
+      40deg,
+      rgba(67, 138, 243, 0.7),
+      rgba(255, 242, 166, 0.7)
+    ),
+    url(./images/portfolio1.png);
   width: 100%;
   background-position: center center;
 }
@@ -168,8 +173,12 @@ $accent-color: #355cc9;
 
 .back {
   transform: rotateY(180deg);
-  background-color: #fff;
   border: 2px solid rgb(240, 240, 240);
+  background-image: linear-gradient(
+    40deg,
+    rgba(67, 138, 243, 0.7),
+    rgba(255, 242, 166, 0.7)
+  );
   .inner {
     grid-template-rows: 1fr 2fr 1fr 2fr 14fr 1fr 1fr;
     grid-template-columns: repeat(4, auto);
