@@ -1,4 +1,14 @@
 import React from "react";
+import {
+  Link,
+  DirectLink,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+  scroller
+} from "react-scroll";
+
 import "./App.scss";
 
 import {
@@ -29,6 +39,14 @@ export default class NavBar extends React.Component {
       isOpen: !this.state.isOpen
     });
   }
+
+  scrollTo() {
+    scroller.scrollTo("scroll-to-element", {
+      duration: 800,
+      delay: 0,
+      smooth: "easeInOutQuart"
+    });
+  }
   render() {
     return (
       <div>
@@ -38,11 +56,16 @@ export default class NavBar extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">About</NavLink>
-              </NavItem>
-              <NavItem>
                 <NavLink href="https://github.com/reactstrap/reactstrap">
-                  Portfolio
+                  <Link
+                    to="card"
+                    spy={true}
+                    smooth={true}
+                    offset={-50}
+                    duration={500}
+                  >
+                    PORTFOLIO
+                  </Link>
                 </NavLink>
               </NavItem>
             </Nav>

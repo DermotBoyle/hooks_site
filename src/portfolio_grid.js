@@ -28,12 +28,24 @@ function Portfolio() {
               <div className="inner">
                 <div className="logos">
                   <div className="tvIcon">
-                    <FontAwesomeIcon icon={faTv}></FontAwesomeIcon>
-                    <span>&nbsp;Website</span>
+                    <a
+                      href="https://alenanik.github.io/New_Project_One/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <FontAwesomeIcon icon={faTv}></FontAwesomeIcon>
+                      <span>&nbsp;Website</span>
+                    </a>
                   </div>
                   <div className="gitIcon">
-                    <FontAwesomeIcon icon={faGithubAlt}></FontAwesomeIcon>
-                    <span>&nbsp;Code</span>
+                    <a
+                      href="https://github.com/AlenaNik/New_Project_One"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <FontAwesomeIcon icon={faGithubAlt}></FontAwesomeIcon>
+                      <span>&nbsp;Code</span>
+                    </a>
                   </div>
                 </div>
                 <div className="info">
@@ -76,12 +88,24 @@ function Portfolio() {
               <div className="inner">
                 <div className="logos">
                   <div className="tvIcon">
-                    <FontAwesomeIcon icon={faTv}></FontAwesomeIcon>
-                    <span>&nbsp;Website</span>
+                    <a
+                      href="https://wakymawcs.herokuapp.com/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <FontAwesomeIcon icon={faTv}></FontAwesomeIcon>
+                      <span>&nbsp;Website</span>
+                    </a>
                   </div>
                   <div className="gitIcon">
-                    <FontAwesomeIcon icon={faGithubAlt}></FontAwesomeIcon>
-                    <span>&nbsp;Code</span>
+                    <a
+                      href="https://github.com/DermotBoyle/wakyProject"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <FontAwesomeIcon icon={faGithubAlt}></FontAwesomeIcon>
+                      <span>&nbsp;Code</span>
+                    </a>
                   </div>
                 </div>
                 <div className="info">
@@ -127,19 +151,32 @@ function Portfolio() {
               <div className="inner">
                 <div className="logos">
                   <div className="tvIcon">
-                    <FontAwesomeIcon icon={faTv}></FontAwesomeIcon>
-                    <span>&nbsp;Website</span>
+                    {" "}
+                    <a
+                      href="https://dermotblog.netlify.com/"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <FontAwesomeIcon icon={faTv}></FontAwesomeIcon>
+                      <span>&nbsp;Website</span>
+                    </a>
                   </div>
                   <div className="gitIcon">
-                    <FontAwesomeIcon icon={faGithubAlt}></FontAwesomeIcon>
-                    <span>&nbsp;Code</span>
+                    <a
+                      href="https://github.com/DermotBoyle/MyBlog"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <FontAwesomeIcon icon={faGithubAlt}></FontAwesomeIcon>
+                      <span>&nbsp;Code</span>
+                    </a>
                   </div>
                 </div>
                 <div className="info">
                   <p>
                     This blog was built to learn more about Gatsby and GraphQL.
                     I really enjoyed this project and hope to work much more
-                    with both of those techologies in future builds.
+                    with both of these technologies in future builds.
                   </p>
                 </div>
                 <label for="card3" className="button return" aria-hidden="true">
