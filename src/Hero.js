@@ -75,6 +75,8 @@ const Hero = () => {
   return (
     <div className="Container">
       <NavBar />
+      <div className="blurimg"></div>
+
       <div className="wrapper">
         {setButtonState === false ? (
           <button className="startButton" onClick={() => setButtonState(true)}>
@@ -83,6 +85,7 @@ const Hero = () => {
         ) : (
           <button className="startButton" style={{ display: "none" }}></button>
         )}
+
         <main className="introAnimation">
           {transitions.map(({ item, props: { innerHeight, ...rest }, key }) => (
             <animated.div

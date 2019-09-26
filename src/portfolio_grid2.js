@@ -3,23 +3,23 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithubAlt } from "@fortawesome/free-brands-svg-icons";
 import { faTv } from "@fortawesome/free-solid-svg-icons";
 
-function Portfolio() {
+function Portfolio2() {
   return (
     <div className="flexWrapper">
       <article className="cardWrapper">
-        <h2 className="titleofproject">BootStrap site & Photogallery</h2>
+        <h2 className="titleofproject">A progress component with animations</h2>
         <div className="card">
           <input
             type="checkbox"
-            id="card1"
+            id="card4"
             class="more"
             aria-hidden="true"
           ></input>
 
           <div className="content">
-            <div className="front1 front">
+            <div className="front4 front">
               <div className="inner">
-                <label for="card1" class="button" aria-hidden="true">
+                <label for="card4" class="button" aria-hidden="true">
                   Details
                 </label>
               </div>
@@ -38,12 +38,13 @@ function Portfolio() {
                 </div>
                 <div className="info">
                   <p>
-                    A website built for a photo blogger. Things of note: it was
-                    built to practice using HTML5, CSS3 andd BootStrap for
-                    styling. It was also important for it to be responsive.{" "}
+                    A component built to practice my skills using flexbox, React
+                    Hooks and animations. The main idea was to create a ReactJS
+                    component as pixel perfect to the original sketch file as
+                    possible.
                   </p>
                 </div>
-                <label for="card1" className="button return" aria-hidden="true">
+                <label for="card4" className="button return" aria-hidden="true">
                   <i className="fas fa-arrow-left">&larr;</i>
                 </label>
               </div>
@@ -53,21 +54,19 @@ function Portfolio() {
       </article>
 
       <article className="cardWrapper">
-        <h2 className="titleofproject">
-          Website for Veterinary service (full-stack)
-        </h2>
+        <h2 className="titleofproject">Liimbio - A text 2 speech App</h2>
         <div className="card">
           <input
             type="checkbox"
-            id="card2"
+            id="card5"
             class="more"
             aria-hidden="true"
           ></input>
 
           <div className="content">
-            <div className="front2 front">
+            <div className="front5 front">
               <div className="inner">
-                <label for="card2" class="button" aria-hidden="true">
+                <label for="card5" class="button" aria-hidden="true">
                   Details
                 </label>
               </div>
@@ -86,15 +85,14 @@ function Portfolio() {
                 </div>
                 <div className="info">
                   <p>
-                    A website built for a start-up in Madrid. It was a
-                    full-stack project that used the MERN stack. It has the
-                    ability to create users and authenticate them. It has data
-                    for veterinaries in the whole of Spain and displays them on
-                    a map using leaflet. I worked a alot with API data calls for
-                    this project on the front-end.
+                    This is a text to speech app that utilises an API for its
+                    funcitonality. Other notable things is the fun use of
+                    JS-Particles as a background and that it can tweet the quote
+                    from your account. It was built in React and style with
+                    bootstrap.
                   </p>
                 </div>
-                <label for="card2" className="button return" aria-hidden="true">
+                <label for="card5" className="button return" aria-hidden="true">
                   <i className="fas fa-arrow-left">&larr;</i>
                 </label>
               </div>
@@ -104,21 +102,19 @@ function Portfolio() {
       </article>
 
       <article className="cardWrapper">
-        <h2 className="titleofproject">
-          My blog built with Gatsby and GraphQL
-        </h2>
+        <h2 className="titleofproject">Mobile App - To Do ! (React Native)</h2>
         <div className="card">
           <input
             type="checkbox"
-            id="card3"
+            id="card6"
             class="more"
             aria-hidden="true"
           ></input>
 
           <div className="content">
-            <div className="front3 front">
+            <div className="front6 front">
               <div className="inner">
-                <label for="card3" class="button" aria-hidden="true">
+                <label for="card6" class="button" aria-hidden="true">
                   Details
                 </label>
               </div>
@@ -137,12 +133,12 @@ function Portfolio() {
                 </div>
                 <div className="info">
                   <p>
-                    This blog was built to learn more about Gatsby and GraphQL.
-                    I really enjoyed this project and hope to work much more
-                    with both of those techologies in future builds.
+                    A mobile To Do App I built in React Native. Runs with the
+                    json server DB and has create/delete funcitonality. Willing
+                    to sell for around 30 million Euro...
                   </p>
                 </div>
-                <label for="card3" className="button return" aria-hidden="true">
+                <label for="card6" className="button return" aria-hidden="true">
                   <i className="fas fa-arrow-left">&larr;</i>
                 </label>
               </div>
@@ -154,4 +150,4 @@ function Portfolio() {
   );
 }
 
-export default Portfolio;
+export default Portfolio2;
