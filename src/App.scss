@@ -341,3 +341,26 @@ ul {
     box-shadow: none;
   }
 }
+
+@media screen and (max-width: 480px) {
+  .introAnimation {
+    font-size: small;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.7);
+    width: 90vw;
+    height: 50%;
+    word-wrap: break-word;
+  }
+
+  .titleofproject {
+    text-align: center;
+  }
+
+  .card {
+    width: 90vw;
+  }
+
+  .wrapper {
+    margin-left: 0;
+  }
+}
