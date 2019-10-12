@@ -342,6 +342,17 @@ ul {
   }
 }
 
+@media screen and (max-width: 800px) {
+  .introAnimation {
+    font-size: small;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.7);
+    width: 90vw;
+    height: 30%;
+    word-wrap: break-word;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .introAnimation {
     font-size: small;
@@ -354,6 +365,10 @@ ul {
 
   .titleofproject {
     text-align: center;
+  }
+
+  .transitions-item {
+    word-wrap: break-word;
   }
 
   .card {

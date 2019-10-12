@@ -72,6 +72,20 @@ const Hero = () => {
 
   useEffect(() => void reset(), []);
 
+  function resizeDiv() {
+    if (window.matchMedia("(min-width: 270px)").matches) {
+      setTimeout(
+        () =>
+          document
+            .getElementById("introAnimation")
+            .setAttribute("style", "height:30%"),
+        12000
+      );
+    }
+    return "";
+  }
+  resizeDiv();
+
   return (
     <div className="Container">
       <NavBar />
@@ -86,7 +100,7 @@ const Hero = () => {
           <button className="startButton" style={{ display: "none" }}></button>
         )}
 
-        <main className="introAnimation">
+        <main className="introAnimation" id="introAnimation">
           {transitions.map(({ item, props: { innerHeight, ...rest }, key }) => (
             <animated.div
               className="transitions-item"
