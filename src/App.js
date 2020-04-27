@@ -1,20 +1,30 @@
 import React from "react";
-import Hero from "./Hero";
-import Portfolio from "./portfolio_grid";
-import Portfolio2 from "./portfolio_grid2";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+import Nav from "./Navbar";
+import Frontend from "./frontend";
 import Contact from "./contact";
+import Home from "./home";
 
 export default class App extends React.Component {
-  render() {
-    return (
-      <>
-        <div className="everything">
-          <Hero />
-          <Portfolio />
-          <Portfolio2 />
-          <Contact />
-        </div>
-      </>
-    );
-  }
+	render() {
+		return (
+			<>
+				<Router>
+					<Nav />
+					<Home />
+					<div className="everything">
+						<Switch>
+							<Route path="/frontend">
+								<Frontend />
+							</Route>
+							<Route path="/contact">
+								<Contact />
+							</Route>
+						</Switch>
+					</div>
+				</Router>
+			</>
+		);
+	}
 }
